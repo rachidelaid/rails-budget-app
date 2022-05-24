@@ -8,6 +8,10 @@
   text-decoration: none;
 }
 
+.p-2 {
+  padding: 2rem;
+}
+
 body {
   font-family: 'Courier New', Courier, monospace;
 }
@@ -22,7 +26,7 @@ a {
   color: rgb(255, 244, 88);
 }
 
-a:hover {
+a:not(.btn):hover {
   text-decoration: underline;
 }
 
@@ -40,7 +44,9 @@ input:not([type='checkbox']) {
 }
 
 button,
+.btn,
 input[type='submit'] {
+  display: block;
   background-color: #36c62b;
   color: #fff;
   font-weight: bold;
@@ -48,6 +54,8 @@ input[type='submit'] {
   padding: 1rem 0.5rem;
   cursor: pointer;
   font-size: 1.1rem;
+  width: 100%;
+  text-align: center;
 }
 
 .main-bg {

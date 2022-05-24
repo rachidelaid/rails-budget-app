@@ -1,4 +1,4 @@
-class Gategory < ApplicationRecord
+class Category < ApplicationRecord
   belongs_to :user
   has_many :transactions, through: :transaction
 

@@ -1,3 +1,18 @@
 <% @page_name = "Transactions" %>
 <% @back = categories_path%>
 <%= render "shared/nav" %>
+
+<div class="transactions">
+  <% @transactions.each do |transaction|  %>
+    <div class="card">
+      <div class="details">
+        <div>
+          <p><%= transaction.name %></p>
+          <span><%= transaction.created_at.to_s.split(" ")[0] %></span>
+        </div>
+      </div>
+      <p>$<%= transaction.amount %></p>
+    </div>
+  <% end %>
+</div>
+<%= link_to "New Transaction", new_category_transaction_path(@id), class:"btn"%>

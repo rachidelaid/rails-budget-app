@@ -12,6 +12,12 @@ body {
   font-family: 'Courier New', Courier, monospace;
 }
 
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
 a {
   color: rgb(255, 244, 88);
 }

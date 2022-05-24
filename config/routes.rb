@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   
   root "splash#index"
 
-  resources :categories, only: %i[index new] do
-    resources :transactions, only: %i[index new]
+  resources :categories, only: %i[index new create] do
+    resources :transactions, only: %i[index new create]
   end
 end

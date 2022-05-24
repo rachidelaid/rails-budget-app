@@ -3,6 +3,9 @@
 <%= render "shared/nav" %>
 
 <div class="transactions">
+  <% if @transactions.empty?%>
+    <p>no transactions</p>
+  <% end %>
   <% @transactions.each do |transaction|  %>
     <div class="card">
       <div class="details">

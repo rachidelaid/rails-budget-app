@@ -97,6 +97,9 @@ input[type='submit'] {
   flex-direction: column;
   padding: 1rem 0.5rem;
   gap: 0.5rem;
+  min-height: calc(100vh - 98px);
+  max-height: calc(100vh - 98px);
+  overflow-y: auto;
 }
 
 .categories a {
@@ -134,4 +137,27 @@ input[type='submit'] {
 
 .card span {
   color: gray;
+}
+
+@keyframes cssAnimation {
+  to {
+    visibility: hidden;
+  }
+}
+
+.notification {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: #064663;
+  z-index: 999;
+  opacity: 0.9;
+  animation: cssAnimation 0s 6s forwards;
+  color: white;
+}
+
+.error {
+  background-color: rgb(163, 106, 0);
 }

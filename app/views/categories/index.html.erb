@@ -2,6 +2,9 @@
 <%= render "shared/nav" %>
 <div class="categories">
   <% @categories.each do |category|  %>
+    <% if @categories.empty?%>
+      <p>no categories</p>
+    <% end %>
     <%= link_to  category_transactions_path(category.id) do%>
       <div class="card">
         <div class="details">

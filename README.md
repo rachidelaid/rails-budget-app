@@ -17,7 +17,7 @@ To get the content of this project locally you need to run this command in your 
 
 ```bash
 git clone your https://github.com/rachidelaid/rails-budget-app.git
-cd recipe
+cd rails-budget-app
 bundle install
 rails s
 ```
@@ -27,7 +27,7 @@ rails s
 To run the tests, navigate to the root directory of this app and run
 
 ```ruby
-rspec spec
+rspec
 ```
 
 ## Authors

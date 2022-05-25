@@ -2,6 +2,11 @@
 <% @back = categories_path%>
 <%= render "shared/nav" %>
 
+<div class="total">
+  <h3>Total:</h3>
+  <h3>$<%= Transaction.where(category_id: @id).reduce(0) { |sum, t| sum + t.amount }  %></h3>
+</div>
+
 <div class="transactions">
   <% if @transactions.empty?%>
     <p>no transactions</p>

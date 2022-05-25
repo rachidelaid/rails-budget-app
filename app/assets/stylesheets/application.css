@@ -92,6 +92,14 @@ input[type='submit'] {
   align-items: center;
 }
 
+.total {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  padding: 0.5rem;
+  box-shadow: 0px 5px 5px -6px rgba(0, 0, 0, 0.75);
+}
+
 .categories,
 .transactions {
   display: flex;
@@ -101,6 +109,11 @@ input[type='submit'] {
   min-height: calc(100vh - 98px);
   max-height: calc(100vh - 98px);
   overflow-y: auto;
+}
+
+.transactions {
+  min-height: calc(100vh - 136px);
+  max-height: calc(100vh - 136px);
 }
 
 .categories a {

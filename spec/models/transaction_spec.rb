@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Transaction, type: :model do
-  describe 'Validations For the Transaction model' do
-  end
+  it { should belong_to :user }
+  it { should belong_to :category }
+  it { should validate_presence_of :name }
+  it { should validate_presence_of :amount }
 end

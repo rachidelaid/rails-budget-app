@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Category, type: :model do
-  describe 'Validations For the Category model' do
-  end
+  it { should belong_to :user }
+  it { should validate_presence_of :name }
+  it { should validate_presence_of :logo }
 end

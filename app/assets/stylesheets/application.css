@@ -66,7 +66,7 @@ input[type='submit'] {
 
 .main-bg {
   background: rgb(51, 84, 173);
-  background: linear-gradient(0deg,rgba(51, 84, 173, 1) 0%,rgba(59, 105, 194, 1) 100%);
+  background: linear-gradient(0deg, rgba(51, 84, 173, 1) 0%, rgba(59, 105, 194, 1) 100%);
   color: #fff;
 }
 

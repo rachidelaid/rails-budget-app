@@ -27,6 +27,11 @@ a {
   color: rgb(255, 244, 88);
 }
 
+.categories a {
+  color: unset;
+  text-decoration: none !important;
+}
+
 a:not(.btn):hover {
   text-decoration: underline;
 }
@@ -61,11 +66,7 @@ input[type='submit'] {
 
 .main-bg {
   background: rgb(51, 84, 173);
-  background: linear-gradient(
-    0deg,
-    rgba(51, 84, 173, 1) 0%,
-    rgba(59, 105, 194, 1) 100%
-  );
+  background: linear-gradient(0deg,rgba(51, 84, 173, 1) 0%,rgba(59, 105, 194, 1) 100%);
   color: #fff;
 }
 
@@ -97,7 +98,7 @@ input[type='submit'] {
   justify-content: space-between;
   background: #fff;
   padding: 0.5rem;
-  box-shadow: 0px 5px 5px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 5px 5px -6px rgba(0, 0, 0, 0.75);
 }
 
 .categories,
@@ -116,16 +117,11 @@ input[type='submit'] {
   max-height: calc(100vh - 136px);
 }
 
-.categories a {
-  color: unset;
-  text-decoration: none !important;
-}
-
 .card {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
   border-radius: 5px;
   background-color: #fff;
 }

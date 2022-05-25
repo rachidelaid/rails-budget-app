@@ -7,7 +7,7 @@ RSpec.describe 'Transactions new', type: :system do
     driven_by(:rack_test)
     sign_in test_user
 
-    @category = Category.create(name: "apple", logo: "apple.png", user_id: test_user.id)
+    @category = Category.create(name: 'apple', logo: 'apple.png', user_id: test_user.id)
 
     visit new_category_transaction_path(@category.id)
   end

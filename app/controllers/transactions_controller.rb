@@ -2,7 +2,7 @@ class TransactionsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @transactions = Transaction.where(category_id: params[:category_id]).order("created_at DESC")
+    @transactions = Transaction.where(category_id: params[:category_id]).order('created_at DESC')
     @id = params[:category_id]
   end
 

@@ -7,7 +7,7 @@ RSpec.describe 'Transactions index', type: :system do
     driven_by(:rack_test)
     sign_in test_user
 
-    @category = Category.create(name: "apple", logo: "apple.png", user_id: test_user.id)
+    @category = Category.create(name: 'apple', logo: 'apple.png', user_id: test_user.id)
 
     visit category_transactions_path(@category.id)
   end

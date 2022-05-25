@@ -2,10 +2,10 @@ require 'rails_helper'
 
 RSpec.describe 'Transactions', type: :request do
   let(:test_user) { create :user }
-  before { 
+  before do
     sign_in test_user
-    @category = Category.create(name: "apple",  logo: "apple.png", user_id: test_user.id)
-  }
+    @category = Category.create(name: 'apple', logo: 'apple.png', user_id: test_user.id)
+  end
 
   describe 'GET /index' do
     before(:each) do

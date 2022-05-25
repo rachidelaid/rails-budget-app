@@ -2,7 +2,7 @@ class TransactionsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @transactions = Transaction.where(category_id: params[:category_id])
+    @transactions = Transaction.where(category_id: params[:category_id]).order("created_at DESC")
     @id = params[:category_id]
   end
 
@@ -14,7 +14,7 @@ class TransactionsController < ApplicationController
     transaction = Transaction.new(allowed_params)
     transaction.user_id = current_user.id
     transaction.category_id = params[:category_id]
-    redirect_to categories_path
+    redirect_to category_transactions_path(params[:category_id])
     if transaction.save
       flash[:notice] = 'transaction created successfully'
     else

@@ -6,6 +6,10 @@ this is a rails mobile web application where you can manage your budget: you hav
 
 ![screenshot](./budget.gif)
 
+## Live Link
+
+[https://ror-budget.herokuapp.com/](https://ror-budget.herokuapp.com/)
+
 ## Video
 
 you can watch the presentation video [here](https://www.loom.com/share/a168ff6416714911a828a85e655947a1).

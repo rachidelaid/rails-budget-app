@@ -13,6 +13,12 @@
       <%= f.label :amount %><br />
       <%= f.number_field :amount %>
     </div>
+
+    <div class="field">
+      <%= f.label :category %><br />
+      <%= f.collection_select :category_id, Category.where(user_id: current_user.id).order(:name),:id,:name %>
+    </div>
+
     <%= f.submit "Create Transaction" %>
   <% end %>
 </div>

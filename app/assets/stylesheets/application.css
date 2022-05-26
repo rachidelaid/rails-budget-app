@@ -43,10 +43,13 @@ form {
   gap: 0.5rem;
 }
 
-input:not([type='checkbox']) {
+input:not([type='checkbox']),
+select {
   width: 100%;
   padding: 0.5rem;
   color: #000;
+  background-color: #fff;
+  border: 1px solid #000;
 }
 
 button,
@@ -66,7 +69,11 @@ input[type='submit'] {
 
 .main-bg {
   background: rgb(51, 84, 173);
-  background: linear-gradient(0deg, rgba(51, 84, 173, 1) 0%, rgba(59, 105, 194, 1) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(51, 84, 173, 1) 0%,
+    rgba(59, 105, 194, 1) 100%
+  );
   color: #fff;
 }
 

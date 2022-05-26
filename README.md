@@ -42,6 +42,10 @@ rspec
 - Twitter: [@rachidelaid1](https://twitter.com/rachidelaid1)
 - LinkedIn: [rachid elaid](https://www.linkedin.com/in/rachidelaid/)
 
+## Acknowledgments
+
+Thanks to minimal for the awesome [design](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=).
+
 ## Show your support
 
 Give a ⭐️ if you like this project!

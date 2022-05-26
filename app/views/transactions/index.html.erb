@@ -1,0 +1,26 @@
+<% @page_name = "Transactions" %>
+<% @back = categories_path%>
+<%= render "shared/nav" %>
+
+<div class="total">
+  <h3>Total:</h3>
+  <h3>$<%= Transaction.where(category_id: @id).reduce(0) { |sum, t| sum + t.amount }  %></h3>
+</div>
+
+<div class="transactions">
+  <% if @transactions.empty?%>
+    <p>no transactions</p>
+  <% end %>
+  <% @transactions.each do |transaction|  %>
+    <div class="card">
+      <div class="details">
+        <div>
+          <p><%= transaction.name %></p>
+          <span><%= transaction.created_at.to_s.split(" ")[0] %></span>
+        </div>
+      </div>
+      <p>$<%= transaction.amount %></p>
+    </div>
+  <% end %>
+</div>
+<%= link_to "New Transaction", new_category_transaction_path(@id), class:"btn"%>

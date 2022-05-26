@@ -1,0 +1,22 @@
+<% @page_name = "Categories" %>
+<%= render "shared/nav" %>
+<div class="categories">
+  <% @categories.each do |category|  %>
+    <% if @categories.empty?%>
+      <p>no categories</p>
+    <% end %>
+    <%= link_to  category_transactions_path(category.id) do%>
+      <div class="card">
+        <div class="details">
+          <img src="<%= category.logo %>" alt="category logo" />
+          <div>
+            <p><%= category.name %></p>
+            <span><%= category.created_at.to_s.split(" ")[0] %></span>
+          </div>
+        </div>
+        <p>$<%= Transaction.where(category_id: category.id).reduce(0) { |sum, t| sum + t.amount } %></p>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+<%= link_to "New Category", new_category_path, class:"btn"%>
